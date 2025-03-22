@@ -1,34 +1,24 @@
-#!/usr/bin/env python3
-
-# Для каждого регулярного выражения, которое требуется написать,
-# указаны строки, соответствующие этому выражению (они отмечены знаком +),
-# а также строки, не соответствующие этому выражению (отмечены знаком -)
-
-# + a
-# + ab
-# - b
-# - ba
-REGEXP_1 = ''
+REGEXP_1 = r'^a[b]?$'
 
 # + aab
 # + abb
 # + acb
 # - ab
 # - aabc
-REGEXP_2 = ''
+REGEXP_2 = r"^a[a-c]b$"
 
 # + sofia.mp3
 # + sofia.mp4
 # - sofia.mp7
 # - sofia.mp34
-REGEXP_3 = ''
+REGEXP_3 = r"^sofia\.mp[34]$"
 
 # + taverna
 # + versus
 # + vera
 # + zveri
 # - zver
-REGEXP_4 = ''
+REGEXP_4 = r"^taverna|versus|vera|zveri$"
 
 # - a
 # - aa
@@ -39,7 +29,7 @@ REGEXP_4 = ''
 # + bbb
 # - bbbb
 # - ccc
-REGEXP_5 = ''
+REGEXP_5 = r"^(a{3}|b{3})$"
 
 # - Ok
 # - OkOk
@@ -49,7 +39,7 @@ REGEXP_5 = ''
 # - abab
 # + ababab
 # - abababab
-REGEXP_6 = ''
+REGEXP_6 = r"^(Ok|ab){3}$"
 
 # - aaa
 # - aaa aaa
@@ -58,7 +48,7 @@ REGEXP_6 = ''
 # + Aaa aaa aaa
 # - A
 # - aaa A aaa
-REGEXP_7 = ''
+REGEXP_7 = r"^(?=.*\bAaa\b)(?:\b[aA]{3}\b\s*){3}$"
 
 # + abc
 # + abc03
@@ -67,4 +57,4 @@ REGEXP_7 = ''
 # - Aabc
 # - abc1
 # - #abc
-REGEXP_8 = ''
+REGEXP_8 = r'^a[.-]?b[.-]?c[.-]?([03])?([03])?$'
