@@ -34,7 +34,7 @@ REGEXP_5 = r'\b\d+\b'
 # New York: W. H. Freeman, pp. 347-353, 1991. ---> Freeman
 # set out to travel much faster than light ---> travel
 # Arise ye, and depart; for this is not your rest... ---> depart
-REGEXP_6 = r'\b[A-Z][a-z]+\b'
+REGEXP_6 = r'\b\w*(?:tr|rt|Fr)\w*\b'
 
 # I know that cat can catch a mouse! ---> cat can catch a mouse
 # But this mouse is faster than the cat. ---> mouse is faster than the cat
@@ -44,4 +44,4 @@ REGEXP_7 = r'cat.*mouse|mouse.*cat'
 # his phone number was 892512366482. ---> 892512366482
 # I called +7 999 648-99-86 ans it was right. ---> +7 999 648-99-86
 # Some 52221 numbers should not hide phone numbers such as 8 915 747-68-99 ---> 8 915 747-68-99
-REGEXP_8 = r'(?:\+7|8)[\s-]*(?:\d[\s-]*){10,11}(?!\d)'
+REGEXP_8 = r'(?:\+7|8)[-\s]?(?:\d[-\s]?){10}(?=\W|$)'
