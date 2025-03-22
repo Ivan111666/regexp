@@ -62,5 +62,5 @@ REGEXP_8_REPL = r' '
 # a xyz xyz a      ---> a a
 # d xy xyza a      ---> d xy a
 # a xyzzy b        ---> a xyzzy b
-REGEXP_9 = r'\b(ab\w+|xyz\w*)\b $'
-REGEXP_9_REPL = r'' 
+REGEXP_9 = r'\b(ab\w+|xyz\w{0,1})\b( )'
+REGEXP_9_REPL = r''
